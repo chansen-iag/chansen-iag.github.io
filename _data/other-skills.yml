@@ -6,6 +6,10 @@
   percentage: 75
   color: success
   
+- name: REST/SCIM Administration
+  percentage: 45
+  color: warning
+  
 - name: SQL
   percentage: 35
   color: error
