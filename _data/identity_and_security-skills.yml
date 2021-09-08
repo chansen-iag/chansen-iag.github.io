@@ -2,17 +2,17 @@
   percentage: 90
   color: warning
   
+- name: Identity Administration and Design
+  percentage: 80
+  color: info
+  
 - name: Micro Focus eDirectory Administration
   percentage: 70
   color: success
   
 - name: XML / XPATH
-  percentage: 60
+  percentage: 55
   color: error
-
-- name: Identity Administration and Design
-  percentage: 50
-  color: info
   
 - name: Microsoft Active Directory Administration
   percentage: 35
