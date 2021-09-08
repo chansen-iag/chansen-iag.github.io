@@ -1,7 +1,11 @@
-- name: Adobe Photoshop
-  percentage: 95
+- name: Linux Administration
+  percentage: 85
   color: info
 
-- name: Adobe Illustrator
-  percentage: 90
+- name: Windows Administration
+  percentage: 75
   color: success
+  
+- name: SQL
+  percentage: 35
+  color: error
