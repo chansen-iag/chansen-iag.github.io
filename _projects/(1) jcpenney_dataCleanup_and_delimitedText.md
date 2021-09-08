@@ -11,8 +11,6 @@ At the ~customer~ company, their footprint around the world has been around for 
 <br>
 It should also be noted that these data correction solutions not only had to apply to a centralized eDirectory environment, but as well as over half a dozen other ADAM and AD environments. The centralized eDirectory environment overtime had been exporting the old/bad data into these other environments. The methods to correct these were two-fold: Leveraging eDirectory's built in tools to push the corrected data out to the connected environments, as well as similar Apache DS/.ldif corrections that were deployed directly in eDirectory.
 
-[//]: <>![preview](https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Apache_Directory_Logo.svg/1200px-Apache_Directory_Logo.svg.png)
-
 <p class="text-center">
 {% include elements/button.html link="https://github.com/YoussefRaafatNasry/portfolYOU" text="Learn More" %}
 </p>
