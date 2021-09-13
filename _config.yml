@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : Cody Hansen portfolio
 description         : >-
-                      Experience in Identity Access & Security
+                      Experience in Consulting & Professional Services for Identity, Access, & Security products
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : chansen-iag/chansen-iag.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
