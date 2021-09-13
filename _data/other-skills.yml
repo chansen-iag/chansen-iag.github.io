@@ -2,14 +2,18 @@
   percentage: 85
   color: info
 
-- name: Windows Administration
+- name: Virtualization
   percentage: 75
   color: success
+
+- name: Windows Administration
+  percentage: 65
+  color: warning
   
 - name: REST/SCIM Administration
   percentage: 45
-  color: warning
+  color: error
   
 - name: SQL
   percentage: 35
-  color: error
+  color: info
