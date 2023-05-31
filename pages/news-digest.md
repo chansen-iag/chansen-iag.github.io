@@ -5,5 +5,5 @@ weight: 2
 permalink: /news-digest/
 ---
 
-#{% include blog/search.html %}
-#{% include blog/index.html %}
+{% include blog/search.html %}
+{% include blog/index.html %}
