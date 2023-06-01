@@ -9,36 +9,32 @@ permalink: /news-digest/
 <html>
 <head>
   <title>RSS Feed Example</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   <div id="rss-feed"></div>
 
   <script>
-    // Fetch the RSS feed using JavaScript
-    $(document).ready(function() {
-      $.ajax({
-        url: 'https://www.theverge.com/google/rss/index.xml', // Replace with the actual RSS feed URL
-        dataType: 'xml',
-        success: function(data) {
-          // Parse the XML data and extract the necessary information
-          var items = $(data).find('item');
-          var feedContent = '';
+    // Fetch the converted RSS feed using JavaScript
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.theverge.com/google/rss/index.xml') // Replace with the actual rss2json API endpoint and RSS feed URL
+      .then(response => response.json())
+      .then(data => {
+        // Extract the necessary information from the JSON data
+        var items = data.items;
+        var feedContent = '';
 
-          items.each(function() {
-            var title = $(this).find('title').text();
-            var link = $(this).find('link').text();
+        items.forEach(function(item) {
+          var title = item.title;
+          var link = item.link;
 
-            // Append the title and link to the feedContent variable
-            feedContent += '<p><a href="' + link + '">' + title + '</a></p>';
-          });
+          // Append the title and link to the feedContent variable
+          feedContent += '<p><a href="' + link + '">' + title + '</a></p>';
+        });
 
-          // Display the feed content in the designated div
-          $('#rss-feed').html(feedContent);
-        }
+        // Display the feed content in the designated div
+        document.getElementById('rss-feed').innerHTML = feedContent;
       });
-    });
   </script>
 </body>
 </html>
+
 
