@@ -5,5 +5,40 @@ weight: 2
 permalink: /news-digest/
 ---
 
-{% include blog/search.html %}
-{% include blog/index.html %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RSS Feed Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="rss-feed"></div>
+
+  <script>
+    // Fetch the RSS feed using JavaScript
+    $(document).ready(function() {
+      $.ajax({
+        url: 'https://www.theverge.com/google/rss/index.xml', // Replace with the actual RSS feed URL
+        dataType: 'xml',
+        success: function(data) {
+          // Parse the XML data and extract the necessary information
+          var items = $(data).find('item');
+          var feedContent = '';
+
+          items.each(function() {
+            var title = $(this).find('title').text();
+            var link = $(this).find('link').text();
+
+            // Append the title and link to the feedContent variable
+            feedContent += '<p><a href="' + link + '">' + title + '</a></p>';
+          });
+
+          // Display the feed content in the designated div
+          $('#rss-feed').html(feedContent);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
