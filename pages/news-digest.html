@@ -55,10 +55,7 @@ permalink: /news-digest/
           var title = item.title;
           var link = item.link;
           var description = item.description;
-
-          // Append the title and link to the feedContent variable
-          //feedContent += '<button class="collapsible">' + title + '</button><div class="content"><p><a href="' + link + '">' + title + '</a></p></div><hr/>';
-          feedContent += '<button class="collapsible">' + title + '</button><div class="content"><p>' + title + '</p></div><hr/>';
+	
 		var coll = document.getElementsByClassName("collapsible");
 		var i;
 		for (i = 0; i < coll.length; i++) {
@@ -72,6 +69,10 @@ permalink: /news-digest/
 		    }
 		  });
 		} 
+          // Append the title and link to the feedContent variable
+          //feedContent += '<button class="collapsible">' + title + '</button><div class="content"><p><a href="' + link + '">' + title + '</a></p></div><hr/>';
+          feedContent += '<button class="collapsible">' + title + '</button><div class="content"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>';
+
         });
 
         // Display the feed content in the designated div
