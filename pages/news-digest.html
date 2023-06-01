@@ -24,7 +24,21 @@ permalink: /news-digest/
         // Extract the necessary information from the JSON data
         var items = data.items;
         var feedContent = '';
-
+	
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.display === "block") {
+	      content.style.display = "none";
+	    } else {
+	      content.style.display = "block";
+	    }
+	  });
+	} 	
+	    
         items.forEach(function(item) {
           var title = item.title;
           var link = item.link;
@@ -32,19 +46,7 @@ permalink: /news-digest/
 
           // Append the title and link to the feedContent variable
           feedContent += '<button class="collapsible">' + title + '</button><div class="content"><p><a href="' + link + '">' + title + '</a></p></div><hr/>';
-		var coll = document.getElementsByClassName("collapsible");
-		var i;
-		for (i = 0; i < coll.length; i++) {
-		  coll[i].addEventListener("click", function() {
-		    this.classList.toggle("active");
-		    var content = this.nextElementSibling;
-		    if (content.style.display === "block") {
-		      content.style.display = "none";
-		    } else {
-		      content.style.display = "block";
-		    }
-		  });
-		} 
+
         });
 
         // Display the feed content in the designated div
