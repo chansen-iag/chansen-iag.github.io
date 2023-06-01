@@ -40,6 +40,22 @@ permalink: /news-digest/
   </br>
   <h3>The Verge - Android</h3>
   <div id="rss-feed-verge"></div>
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.maxHeight){
+	      content.style.maxHeight = null;
+	    } else {
+	      content.style.maxHeight = content.scrollHeight + "px";
+	    } 
+	  });
+	}
+	</script>
   <script>
     // Fetch the converted RSS feed using JavaScript
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.theverge.com/google/rss/index.xml') // Replace with the actual rss2json API endpoint and RSS feed URL
@@ -48,28 +64,12 @@ permalink: /news-digest/
         // Extract the necessary information from the JSON data
         var items = data.items;
         var feedContent = '';
-	
-	
 	    
         items.forEach(function(item) {
           var title = item.title;
           var link = item.link;
           var description = item.description;
 	
-		var coll = document.getElementsByClassName("collapsible");
-		var i;
-
-		for (i = 0; i < coll.length; i++) {
-		  coll[i].addEventListener("click", function() {
-		    this.classList.toggle("active");
-		    var content = this.nextElementSibling;
-		    if (content.style.maxHeight){
-		      content.style.maxHeight = null;
-		    } else {
-		      content.style.maxHeight = content.scrollHeight + "px";
-		    } 
-		  });
-		}
           // Append the title and link to the feedContent variable
           //feedContent += '<button class="collapsible">' + title + '</button><div class="content"><p><a href="' + link + '">' + title + '</a></p></div><hr/>';
           feedContent += '<button class="collapsible">' + title + '</button><div class="content"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>';
