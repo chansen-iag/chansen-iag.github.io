@@ -1,8 +1,8 @@
 ---
 layout: default
-title: News Digest
+title: Tech News
 weight: 2
-permalink: /news-digest/
+permalink: /tech-news/
 ---
 
 <!DOCTYPE html>
@@ -64,7 +64,7 @@ permalink: /news-digest/
   <div id="rss-feed-verge"></div>
   <script>
     // Fetch the converted RSS feed using JavaScript
-    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.theverge.com/google/rss/index.xml') // Replace with the actual rss2json API endpoint and RSS feed URL
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.theverge.com/rss/frontpage') // Replace with the actual rss2json API endpoint and RSS feed URL
       .then(response => response.json())
       .then(data => {
         // Extract the necessary information from the JSON data
