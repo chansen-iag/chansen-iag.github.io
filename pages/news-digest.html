@@ -56,29 +56,13 @@ permalink: /news-digest/
 	
           // Append the title and link to the feedContent variable
           //feedContent += '<button class="collapsible">' + title + '</button><div class="content"><p><a href="' + link + '">' + title + '</a></p></div><hr/>';
-	  feedContent += '<detaila><summary>' + title + '</summary><p><a href="' + link + '">' + title + '</a></p></details><hr/>';
+	  feedContent += '<details><summary>' + title + '</summary><p><a href="' + link + '">' + title + '</a></p></details>';
         });
 
         // Display the feed content in the designated div
         document.getElementById('rss-feed-verge').innerHTML = feedContent;
       });
   </script>
-	<script>
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
-
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-	    this.classList.toggle("active");
-	    var content = this.nextElementSibling;
-	    if (content.style.maxHeight){
-	      content.style.maxHeight = null;
-	    } else {
-	      content.style.maxHeight = content.scrollHeight + "px";
-	    } 
-	  });
-	}
-	</script>
   </br>
   <h3>FFXVI - Subreddit</h3>
   <div id="rss-feed-ffxvi"></div>
