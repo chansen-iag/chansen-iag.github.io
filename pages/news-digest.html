@@ -40,22 +40,6 @@ permalink: /news-digest/
   </br>
   <h3>The Verge - Android</h3>
   <div id="rss-feed-verge"></div>
-	<script>
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
-
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-	    this.classList.toggle("active");
-	    var content = this.nextElementSibling;
-	    if (content.style.maxHeight){
-	      content.style.maxHeight = null;
-	    } else {
-	      content.style.maxHeight = content.scrollHeight + "px";
-	    } 
-	  });
-	}
-	</script>
   <script>
     // Fetch the converted RSS feed using JavaScript
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.theverge.com/google/rss/index.xml') // Replace with the actual rss2json API endpoint and RSS feed URL
@@ -80,6 +64,22 @@ permalink: /news-digest/
         document.getElementById('rss-feed-verge').innerHTML = feedContent;
       });
   </script>
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.maxHeight){
+	      content.style.maxHeight = null;
+	    } else {
+	      content.style.maxHeight = content.scrollHeight + "px";
+	    } 
+	  });
+	}
+	</script>
   </br>
   <h3>FFXVI - Subreddit</h3>
   <div id="rss-feed-ffxvi"></div>
