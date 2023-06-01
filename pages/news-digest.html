@@ -33,6 +33,17 @@ permalink: /news-digest/
 	  transition: max-height 0.2s ease-out;
 	  background-color: #f1f1f1;
 	}
+	details summary::before { 
+	content:"🡒"; 
+	color: red; 
+	/* you can style it however you want, use background-image for example */
+	}
+
+	/* By using [open] we can define different styles when the disclosure widget is open */
+	details[open] summary::before { 
+	content:"🡑"; 
+	color: red 
+	}
 	</style>
 </head>
 <body>
@@ -56,7 +67,7 @@ permalink: /news-digest/
 	
           // Append the title and link to the feedContent variable
           //feedContent += '<button class="collapsible">' + title + '</button><div class="content"><p><a href="' + link + '">' + title + '</a></p></div><hr/>';
-	  feedContent += '<details><summary>' + title + '</summary><p><a href="' + link + '">' + title + '</a></p></details>';
+	  feedContent += '<details><summary><a href="' + link + '">' + title + '</a></summary><p>' + description + '</p></details>';
         });
 
         // Display the feed content in the designated div
