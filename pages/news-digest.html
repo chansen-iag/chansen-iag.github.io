@@ -37,126 +37,21 @@ permalink: /news-digest/
 			transition: max-height 0.2s ease-out;
 			background-color: #f1f1f1;
 		}
-		.styled summary::-webkit-details-marker {
-		 display: none;
+		summary {
+			list-style: none
 		}
-
-		.styled summary {
-		 list-style: none;
-		  padding: 1em;
-		  cursor: default;
-		  border: 1px solid;
-		  background: #fafafa;
-		  padding-right: 1.5em;
-		  position: relative;
-
-		  &::after {
-		    content: '';
-		    border-right: 4px solid;
-		    border-bottom: 4px solid;
-		    position: absolute;
-		    right: .75em;
-		    height: .75em;
-		    width: .75em;
-		    transform: rotate(45deg) translatey(-.1em);
-		  }
-
-		  &:focus {
-		    outline: 2px solid;
-		    outline-offset: 1px;
-		  }
+		summary::-webkit-details-marker {
+			display: none;
 		}
-
-		details[open].styled > summary::after {
-		  transform: rotate(-135deg) translatey(-.3em);
+		details summary::before {
+			content:"+"; 
+			color: black; 
 		}
-
-		details > div {
-		  padding: 1em;
-		  border: 1px solid;
-		  border-top: 0;
+		details[open] summary::before {
+			content:"-";
+			color: red;
 		}
-
-		details {
-		  margin: 1em 0;
-		}
-
-
-
-
-		// results and non-disclosure widget styles
-		body {
-		  font-family: arial;
-		  margin: 1.25em;
-		  background: #fafafa;
-		  padding: .55em;
-		}
-
-		header {
-		  margin: 0 0 .75em;
-		  padding-bottom: .75em;
-		  border-bottom: 1px solid #aaa;
-
-		  h1 {
-		    margin: 0;
-		  }
-
-		  :last-child {
-		    margin-bottom: 0;
-		  }
-		}
-
-		summary h3 {
-		  display: inline-block;
-		  margin: 0;
-		}
-
-		h2 {
-		  margin-top: 1.5em;
-		  margin-bottom: .75em;
-		}
-
-		.tests {
-		  max-width: 400px;
-		}
-
-		caption { text-align: left; font-size: 1.25em; margin-top: 1em;}
-
-		.results {
-		  border-top: 1px solid;
-		    margin-top: 2em; 
-
-		  table {
-		    width: 100%;
-		    min-width: 1100px;    
-		  }
-		  caption {
-		    margin: 1em 0;
-		  }
-		  th {
-		    word-break: break-word;
-		    font-size: .82em;
-		  }
-		  th, td:not(:empty) {
-		    border: 1px solid;
-		    text-align: left;
-		    padding: .25em;
-		    min-width: 140px;
-		  }
-		}
-
-		.result-tables {
-		  overflow: auto;
-		}
-
-		li p {
-		  margin: .5em 0;
-		}
-
-		.concern {
-		  background: lightyellow;
-		  font-weight: bold;
-		}
+		
 	</style>
 </head>
 <body>
