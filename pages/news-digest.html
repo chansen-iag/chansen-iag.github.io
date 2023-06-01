@@ -14,7 +14,7 @@ permalink: /news-digest/
   <h1>News Digest</h1>
   </br>
   <h3>The Verge - Android</h3>
-  <div id="rss-feed"></div>
+  <div id="rss-feed-verge"></div>
   <script>
     // Fetch the converted RSS feed using JavaScript
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.theverge.com/google/rss/index.xml') // Replace with the actual rss2json API endpoint and RSS feed URL
@@ -33,12 +33,12 @@ permalink: /news-digest/
         });
 
         // Display the feed content in the designated div
-        document.getElementById('rss-feed').innerHTML = feedContent;
+        document.getElementById('rss-feed-verge').innerHTML = feedContent;
       });
   </script>
   </br>
   <h3>FFXVI - Subreddit</h3>
-  <div id="rss-feed"></div>
+  <div id="rss-feed-ffxvi"></div>
   <script>
     // Fetch the converted RSS feed using JavaScript
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.reddit.com/r/ffxvi.rss') // Replace with the actual rss2json API endpoint and RSS feed URL
@@ -57,7 +57,7 @@ permalink: /news-digest/
         });
 
         // Display the feed content in the designated div
-        document.getElementById('rss-feed').innerHTML = feedContent;
+        document.getElementById('rss-feed-ffxvi').innerHTML = feedContent;
       });
   </script>
 </body>
