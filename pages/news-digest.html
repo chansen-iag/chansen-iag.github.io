@@ -27,9 +27,10 @@ permalink: /news-digest/
         items.forEach(function(item) {
           var title = item.title;
           var link = item.link;
+          var description = item.description;
 
           // Append the title and link to the feedContent variable
-          feedContent += '<p><a href="' + link + '">' + title + '</a></p>';
+          feedContent += '<p><a href="' + link + '">' + title + '</a></p></br><p> + description + </p>';
         });
 
         // Display the feed content in the designated div
