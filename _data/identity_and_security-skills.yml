@@ -1,0 +1,19 @@
+- name: LDAP Administration
+  percentage: 95
+  color: warning
+  
+- name: Identity Administration and Design
+  percentage: 87
+  color: info
+  
+- name: Micro Focus eDirectory Administration
+  percentage: 72
+  color: success
+  
+- name: Multi-Factor Authentication & SSO
+  percentage: 60
+  color: error
+  
+- name: Governance Administration and Design
+  percentage: 48
+  color: danger

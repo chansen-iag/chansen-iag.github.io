@@ -1,0 +1,163 @@
+---
+layout: default
+title: Tech News
+weight: 2
+permalink: /tech-news/
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  	<title>RSS Feed Example</title>
+	<style>
+		img {
+			max-width:100%;
+			height:auto;
+		}
+		.collapsible {
+			background-color: #777;
+			color: white;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 15px;
+		}
+
+		.active, .collapsible:hover {
+			background-color: #555;
+		}
+
+		.content {
+			padding: 0 18px;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+			background-color: #f1f1f1;
+		}
+		summary {
+			list-style: none
+		}
+		summary::-webkit-details-marker {
+			display: none;
+		}
+		details summary::before {
+			content:" +  "; 
+			color: grey; 
+		}
+		details[open] summary::before {
+			content:" -  ";
+			color: red;
+		}
+		a:hover {
+		 	font-size:125%;
+		}
+		
+	</style>
+</head>
+<body>
+  <h1>Tech News</h1>
+  </br>
+  <h3>The Verge</h3>
+  <div id="rss-feed-verge"></div>
+  <script>
+    // Fetch the converted RSS feed using JavaScript
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.theverge.com/rss/frontpage') // Replace with the actual rss2json API endpoint and RSS feed URL
+      .then(response => response.json())
+      .then(data => {
+        // Extract the necessary information from the JSON data
+        var items = data.items;
+        var feedContent = '';
+	    
+        items.forEach(function(item) {
+          var title = item.title;
+          var link = item.link;
+          var description = item.description;
+	
+          // Append the title and link to the feedContent variable
+	  feedContent += '<details><summary><a href="' + link + '">' + title + '</a></summary><p>' + description + '</p></details>';
+        });
+
+        // Display the feed content in the designated div
+        document.getElementById('rss-feed-verge').innerHTML = feedContent;
+      });
+  </script>
+  </br>
+  <h3>Techcrunch</h3>
+  <div id="rss-feed-techcrunch"></div>
+  <script>
+    // Fetch the converted RSS feed using JavaScript
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://techcrunch.com/feed') // Replace with the actual rss2json API endpoint and RSS feed URL
+      .then(response => response.json())
+      .then(data => {
+        // Extract the necessary information from the JSON data
+        var items = data.items;
+        var feedContent = '';
+	    
+        items.forEach(function(item) {
+          var title = item.title;
+          var link = item.link;
+          var description = item.description;
+	
+          // Append the title and link to the feedContent variable
+	  feedContent += '<details><summary><a href="' + link + '">' + title + '</a></summary><p>' + description + '</p></details>';
+        });
+
+        // Display the feed content in the designated div
+        document.getElementById('rss-feed-techcrunch').innerHTML = feedContent;
+      });
+  </script>
+  </br>
+  <h3>Mashable</h3>
+  <div id="rss-feed-mashable"></div>
+  <script>
+    // Fetch the converted RSS feed using JavaScript
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.mashable.com/feeds/rss/all') // Replace with the actual rss2json API endpoint and RSS feed URL
+      .then(response => response.json())
+      .then(data => {
+        // Extract the necessary information from the JSON data
+        var items = data.items;
+        var feedContent = '';
+	    
+        items.forEach(function(item) {
+          var title = item.title;
+          var link = item.link;
+          var description = item.description;
+	
+          // Append the title and link to the feedContent variable
+	  feedContent += '<details><summary><a href="' + link + '">' + title + '</a></summary><p>' + description + '</p></details>';
+        });
+
+        // Display the feed content in the designated div
+        document.getElementById('rss-feed-mashable').innerHTML = feedContent;
+      });
+  </script>
+  </br>
+  <h3>Wired</h3>
+  <div id="rss-feed-wired"></div>
+  <script>
+    // Fetch the converted RSS feed using JavaScript
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.wired.com/feed/rss') // Replace with the actual rss2json API endpoint and RSS feed URL
+      .then(response => response.json())
+      .then(data => {
+        // Extract the necessary information from the JSON data
+        var items = data.items;
+        var feedContent = '';
+	    
+        items.forEach(function(item) {
+          var title = item.title;
+          var link = item.link;
+          var description = item.description;
+	
+          // Append the title and link to the feedContent variable
+	  feedContent += '<details><summary><a href="' + link + '">' + title + '</a></summary><p>' + description + '</p></details>';
+        });
+
+        // Display the feed content in the designated div
+        document.getElementById('rss-feed-wired').innerHTML = feedContent;
+      });
+  </script>
+</body>
+</html>

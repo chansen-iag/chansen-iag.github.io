@@ -1,0 +1,19 @@
+- name: Linux Administration
+  percentage: 85
+  color: info
+
+- name: Virtualization
+  percentage: 72
+  color: success
+
+- name: Windows Administration
+  percentage: 65
+  color: warning
+  
+- name: Microsoft Active Directory Administration
+  percentage: 45
+  color: error
+  
+- name: Server Vulnerability & Compliance 
+  percentage: 41
+  color: info
