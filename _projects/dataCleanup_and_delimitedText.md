@@ -1,7 +1,7 @@
 ---
 name: Data Cleanup and Delimited Text
 tools: [LDAP, XML, CSV]
-image: https://static.thenounproject.com/png/2942557-200.png
+image: https://greentheweb.com/wp-content/uploads/2023/02/image_TrashBin.png
 description: A multi-year, multi-phase plan was put together to modernize data that had been following decades-old, outdated guidelines. As a preliminary effort, I was tasked with assisting the cleanup and restructuring of over 300,000 user objects as well as thousands of other roles and resource objects in preparation for the future steps of their modernization plan.
 ---
 
