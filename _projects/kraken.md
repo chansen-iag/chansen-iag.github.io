@@ -2,7 +2,7 @@
 name: Helping Allay their Fears
 tools: [IDM, XML, Policy, RedHat, Linux]
 image: https://static.wikia.nocookie.net/monke-isles/images/b/bb/Krak.jpg
-description: Abundant applications required abundant certificate updates and monitoring
+description: Engineer with understandable uneasiness has his concerns sorted out through diligant re-architecture of his Identities and Access Management.
 ---
 
 # "A terrifying Kraken reduced to a simple squid"
