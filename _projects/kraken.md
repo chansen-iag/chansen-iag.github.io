@@ -1,7 +1,7 @@
 ---
 name: Helping Allay their Fears
 tools: [IDM, XML, Policy, RedHat, Linux]
-image: https://ee2cc1f8.rocketcdn.me/wp-content/uploads/2024/07/SSL.png
+image: 
 description: Abundant applications required abundant certificate updates and monitoring
 ---
 
