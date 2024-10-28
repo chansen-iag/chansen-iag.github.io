@@ -1,7 +1,7 @@
 ---
 name: Helping Allay their Fears
 tools: [IDM, XML, Policy, RedHat, Linux]
-image: 
+image: https://static.wikia.nocookie.net/monke-isles/images/b/bb/Krak.jpg/revision/latest?cb=20240129022253
 description: Abundant applications required abundant certificate updates and monitoring
 ---
 
